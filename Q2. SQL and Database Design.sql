@@ -1,5 +1,3 @@
-Q2. SQL and Database Design
-
 CREATE TABLE User (
     user_id INT AUTO_INCREMENT PRIMARY KEY,
     name VARCHAR(100) NOT NULL,
@@ -13,7 +11,7 @@ CREATE TABLE Product (
     price DECIMAL(10, 2) NOT NULL
 );
 
-CREATE TABLE Order (
+CREATE TABLE `Order` (
     order_id INT AUTO_INCREMENT PRIMARY KEY,
     user_id INT NOT NULL,
     FOREIGN KEY (user_id) REFERENCES User(user_id)
@@ -59,4 +57,8 @@ VALUES
 (3, 2, 1),   -- Order 3: Mouse x1
 (3, 4, 1);   -- Order 3: Monitor x1
 
+select * from user;
+select * from product;
+select * from `order`;
+select * from orderItem;
 
